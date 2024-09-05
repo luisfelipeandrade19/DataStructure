@@ -14,6 +14,7 @@ void bubbleSort(int *v, int n){
             swap(&v[i], &v[i + 1]);
         }
     }
+    bubbleSort(v, n-1);
 }
 
 void selectionSort(int *num, int tam) {

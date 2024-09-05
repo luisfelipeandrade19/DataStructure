@@ -25,10 +25,11 @@ int main(int argc, char const *argv[]){
     scanf("%d", &escolha);
 
         int l;
+        int n;
+        int *arr = NULL;
         switch (escolha){
             case 1:
-            int arr1[0];
-            int n = 0;
+            
             printf("-------------------------\n");
             printf("Gerando Aleatoriamente...\n");
             printf("-------------------------\n\n");
@@ -42,8 +43,6 @@ int main(int argc, char const *argv[]){
                 double tempo;
                 clock_t inicio, fim;
 
-                
-
                 printf("Qual tamanho de Array que deseja gerar?\n");
                 scanf("%d", &n);
                 if(n <= 0){
@@ -51,21 +50,21 @@ int main(int argc, char const *argv[]){
                     return -1;
                 }
 
-                arr1[n];
-
                 inicio = clock();
+                    arr = (int *)malloc(n * sizeof(int));
 
-                    gerarAleatorio(arr1, n);
-                    printArray(arr1, n);
+                    gerarAleatorio(arr, n);
+                    printf("Imprimindo os primeiros 35 elementos do Array...\n");
+                    printArray(arr, n);
 
                     printf("-------------------------\n"
                            "--------Ordenando--------\n"
                            "-------------------------\n\n");
                     
-                    bubbleSort(arr1, n);
+                    bubbleSort(arr, n);
 
-                    printf("Array ordenado: ");
-                    printArray(arr1, n);
+                    printf("Imprimindo os primeiros 35 elementos do Array...\n");
+                    printArray(arr, n);
 
                 fim = clock();
 
@@ -73,18 +72,18 @@ int main(int argc, char const *argv[]){
                 printf("\nTempo gasto: %g s.\n", tempo);
 
             }else if (l == 2) {
-                printArray(arr1, n);
+                printf("Imprimindo os primeiros 35 elementos do Array...\n");
+                printArray(arr, n);
                 return 0;
             } else {
                 printf("Opcao invalida\n");
                 return 1;
             }
+            free(arr);
             break;
 
 
             case 2:
-            int n = 0;
-            int arr2[0];
             printf("-------------------------\n");
             printf("Gerando Ordenadamente....\n");
             printf("-------------------------\n\n");
@@ -106,21 +105,22 @@ int main(int argc, char const *argv[]){
                     return -1;
                 }
 
-                arr2[n];
+                arr = (int *)malloc(n * sizeof(int));
 
                 inicio = clock();
 
-                    gerarOrdenado(arr2, n);
-                    printArray(arr2, n);
+                    gerarOrdenado(arr, n);
+                    printf("Imprimindo os primeiros 35 elementos do Array...\n");
+                    printArray(arr, n);
 
                     printf("-------------------------\n"
                            "--------Ordenando--------\n"
                            "-------------------------\n\n");
                     
-                    bubbleSort(arr2, n);
+                    bubbleSort(arr, n);
 
-                    printf("Array ordenado: ");
-                    printArray(arr2, n);
+                    printf("Imprimindo os primeiros 35 elementos do Array...\n");
+                    printArray(arr, n);
 
                 fim = clock();
 
@@ -128,7 +128,8 @@ int main(int argc, char const *argv[]){
                 printf("\nTempo gasto: %g s.\n", tempo);
 
             }else if (l == 2) {
-                printArray(arr2, n);
+                printf("Imprimindo os primeiros 35 elementos do Array...\n");
+                printArray(arr, n);
                 return 0;
             } else {
                 printf("Opcao invalida\n");
@@ -137,8 +138,7 @@ int main(int argc, char const *argv[]){
             break;
 
             case 3:
-                int arr3[0];
-                int n = 0;
+
                  printf("-----------------------------\n");
                  printf("Gerando Reversamente Ordenado\n");
                  printf("-----------------------------\n\n");
@@ -159,28 +159,30 @@ int main(int argc, char const *argv[]){
                     printf("valor invalido!");
                     return -1;
                 } 
-                arr3[n];
+                arr = (int *)malloc(n * sizeof(int));
 
                 inicio = clock();
 
-                    gerarOrdenado(arr3, n);
-                    printArray(arr3, n);
+                    gerarOrdenado(arr, n);
+                    printf("Imprimindo os primeiros 35 elementos do Array...\n");
+                    printArray(arr, n);
 
                     printf("-------------------------\n"
                            "--------Ordenando--------\n"
                            "-------------------------\n\n");
                     
-                    bubbleSort(arr3, n);
+                    bubbleSort(arr, n);
 
-                    printf("Array ordenado: ");
-                    printArray(arr3, n);
+                    printf("Imprimindo os primeiros 35 elementos do Array...\n");
+                    printArray(arr, n);
 
                 fim = clock();
 
                 tempo = ((double)(fim - inicio)) / CLOCKS_PER_SEC;
                 printf("\nTempo gasto: %g s.\n", tempo);
             } else if (l == 2) {
-                printArray(arr3, n);
+                printf("Imprimindo os primeiros 35 elementos do Array...\n");
+                printArray(arr, n);
                 return 0;
             } else {
                 printf("Opcao invalida\n");
