@@ -10,6 +10,7 @@ void bubbleSort(int *v, int n){
     }
 }
 
+
 void swap(int *a, int* b){
     int temp = *a;
     *a = *b;
@@ -24,12 +25,31 @@ void selectionSort(int *num, int tam) {
  min = i;
 
  for (j = (i+1); j < tam; j++) {
- if(num[j] < num[min])
- min = j;
+    if(num[j] < num[min]){
+    min = j;
+    }
  } 
 
- if (i != min) 
- swap(&num[i], &num[min]);
-
- }
+ if (i != min){
+    swap(&num[i], &num[min]);
+        }
+    }
 }
+
+void insertionSort(int *a, int n) {
+ int i, j, chave;
+
+ for (i = 1; i < n; i++) {
+    chave = a[i];
+
+    j = i - 1;
+
+    while (j >= 0 && a[j] > chave) {
+        a[j + 1] = a[j];
+        j = j - 1;
+    }
+
+    a[j + 1] = chave;
+    }
+}
+
