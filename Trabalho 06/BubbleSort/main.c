@@ -15,6 +15,9 @@ int main(int argc, char const *argv[])
     clock_t inicio, fim;
 
     inicio = clock();
+
+    
+
     fim = clock();
 
     tempo = ((double)(fim - inicio)) / CLOCKS_PER_SEC;
