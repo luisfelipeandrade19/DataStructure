@@ -3,10 +3,7 @@
 #include <time.h>
 #include "Sorts.c"
 
-int gerador(){
- srand(time(NULL));
- return rand() % 1000;
-}
+
 
 
 int main(int argc, char const *argv[])
