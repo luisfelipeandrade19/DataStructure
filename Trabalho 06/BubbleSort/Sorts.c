@@ -53,7 +53,3 @@ void insertionSort(int *a, int n) {
     }
 }
 
-int gerador(){
- srand(time(NULL));
- return rand() % 1000;
-}

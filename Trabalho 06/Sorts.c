@@ -52,8 +52,3 @@ void insertionSort(int *a, int n) {
     a[j + 1] = chave;
     }
 }
-
-int gerador(){
- srand(time(NULL));
- return rand() % 1000;
-}
