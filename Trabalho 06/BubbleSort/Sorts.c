@@ -53,8 +53,22 @@ void insertionSort(int *a, int n) {
     }
 }
 
-void printArray(int arr[], int n) {
+void gerarOrdenado(int arr[], int n) {
     for (int i = 0; i < n; i++) {
+        arr[i] = i;  
+    }
+}
+
+
+void gerarReverso(int arr[], int n) {
+    for (int i = 0; i < n; i++) {
+        arr[i] = n - i;  
+    }
+}
+
+
+void printArray(int arr[], int n) {
+    for (int i = 0; i < n && i < 35; i++) {  
         printf("%d ", arr[i]);
     }
     printf("\n");
