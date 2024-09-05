@@ -1,3 +1,9 @@
+void swap(int *a, int* b){
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
 void bubbleSort(int *v, int n){
     if(n < 1){
         return;
@@ -9,14 +15,6 @@ void bubbleSort(int *v, int n){
         }
     }
 }
-
-
-void swap(int *a, int* b){
-    int temp = *a;
-    *a = *b;
-    *b = temp;
-}
-
 
 void selectionSort(int *num, int tam) {
  int i, j, min, aux;
