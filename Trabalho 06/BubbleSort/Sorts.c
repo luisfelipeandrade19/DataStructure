@@ -66,6 +66,12 @@ void gerarReverso(int arr[], int n) {
     }
 }
 
+void gerarAleatorio(int arr[], int n) {
+    for (int i = 0; i < n; i++) {
+        arr[i] = rand() % 10000000;  
+    }
+}
+
 
 void printArray(int arr[], int n) {
     for (int i = 0; i < n && i < 35; i++) {  
@@ -73,3 +79,4 @@ void printArray(int arr[], int n) {
     }
     printf("\n");
 }
+
