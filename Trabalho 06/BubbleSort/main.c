@@ -9,10 +9,12 @@ int gerador(){
 }
 
 
-int main(int argc, char const *argv[])
-{
+int main(int argc, char const *argv[]){
+
     int escolha;
-    printf("-------------------------\n");
+    do
+    {
+        printf("-------------------------\n");
     printf("-Algoritmos de Ordenacao-\n");
     printf("-------Bubble Sort-------\n");
     printf("-------------------------\n\n");
@@ -23,8 +25,7 @@ int main(int argc, char const *argv[])
            "4- Encerrar programa\n\n");
     scanf("%d", &escolha);
 
-    do
-    {
+    
         switch (escolha)
         {
             case 1:
@@ -73,14 +74,12 @@ int main(int argc, char const *argv[])
 
             }
             break;
+            
     
             default:
             break;
         }
     } while (escolha != 4);
     
-    
-    
-
     return 0;
 }
