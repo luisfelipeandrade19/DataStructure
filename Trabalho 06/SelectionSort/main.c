@@ -15,7 +15,7 @@ int main(int argc, char const *argv[]){
     do{
     printf("-------------------------\n");
     printf("-Algoritmos de Ordenacao-\n");
-    printf("-------Bubble Sort-------\n");
+    printf("-----Selection Sort------\n");
     printf("-------------------------\n\n");
 
     printf("1- Gerar Array de forma aleatoria\n"
@@ -61,7 +61,7 @@ int main(int argc, char const *argv[]){
                            "--------Ordenando--------\n"
                            "-------------------------\n\n");
                     
-                    bubbleSort(arr, n);
+                    selectionSort(arr, n);
 
                     printf("Imprimindo os primeiros 35 elementos do Array...\n");
                     printArray(arr, n);
@@ -117,7 +117,7 @@ int main(int argc, char const *argv[]){
                            "--------Ordenando--------\n"
                            "-------------------------\n\n");
                     
-                    bubbleSort(arr, n);
+                    selectionSort(arr, n);
 
                     printf("Imprimindo os primeiros 35 elementos do Array...\n");
                     printArray(arr, n);
@@ -171,7 +171,7 @@ int main(int argc, char const *argv[]){
                            "--------Ordenando--------\n"
                            "-------------------------\n\n");
                     
-                    bubbleSort(arr, n);
+                    selectionSort(arr, n);
 
                     printf("Imprimindo os primeiros 35 elementos do Array...\n");
                     printArray(arr, n);
