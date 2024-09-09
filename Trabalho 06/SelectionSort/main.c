@@ -15,7 +15,7 @@ int main(int argc, char const *argv[]){
     do{
     printf("-------------------------\n");
     printf("-Algoritmos de Ordenacao-\n");
-    printf("-----Selection Sort------\n");
+    printf("-----Insertion Sort------\n");
     printf("-------------------------\n\n");
 
     printf("1- Gerar Array de forma aleatoria\n"
@@ -38,20 +38,21 @@ int main(int argc, char const *argv[]){
                    "1- Sim\n"
                   "2- Nao\n\n");
                   scanf("%d", &l);
+
+                  arr = (int *)malloc(n * sizeof(int));
+
+                  printf("Qual tamanho de Array que deseja gerar?\n");
+                    scanf("%d", &n);
+                    if(n <= 0){
+                    printf("valor invalido!");
+                    return -1;
+                } 
             if(l == 1){
 
                 double tempo;
                 clock_t inicio, fim;
 
-                printf("Qual tamanho de Array que deseja gerar?\n");
-                scanf("%d", &n);
-                if(n <= 0){
-                    printf("valor invalido!");
-                    return -1;
-                }
-
                 inicio = clock();
-                    arr = (int *)malloc(n * sizeof(int));
 
                     gerarAleatorio(arr, n);
                     printf("Imprimindo os primeiros 35 elementos do Array...\n");
@@ -61,7 +62,7 @@ int main(int argc, char const *argv[]){
                            "--------Ordenando--------\n"
                            "-------------------------\n\n");
                     
-                    selectionSort(arr, n);
+                    insertionSort(arr, n);
 
                     printf("Imprimindo os primeiros 35 elementos do Array...\n");
                     printArray(arr, n);
@@ -74,7 +75,7 @@ int main(int argc, char const *argv[]){
             }else if (l == 2) {
                 printf("Imprimindo os primeiros 35 elementos do Array...\n");
                 printArray(arr, n);
-                return 0;
+                
             } else {
                 printf("Opcao invalida\n");
                 return 1;
@@ -91,21 +92,19 @@ int main(int argc, char const *argv[]){
                    "1- Sim\n"
                    "2- Nao\n\n");
                   scanf("%d", &l);
+
+                  arr = (int *)malloc(n * sizeof(int));
+
+                  printf("Qual tamanho de Array que deseja gerar?\n");
+                    scanf("%d", &n);
+                    if(n <= 0){
+                    printf("valor invalido!");
+                    return -1;
+                } 
             if(l == 1){
 
                 double tempo;
                 clock_t inicio, fim;
-
-                
-
-                printf("Qual tamanho de Array que deseja gerar?\n");
-                scanf("%d", &n);
-                if(n <= 0){
-                    printf("valor invalido!");
-                    return -1;
-                }
-
-                arr = (int *)malloc(n * sizeof(int));
 
                 inicio = clock();
 
@@ -117,7 +116,7 @@ int main(int argc, char const *argv[]){
                            "--------Ordenando--------\n"
                            "-------------------------\n\n");
                     
-                    selectionSort(arr, n);
+                    insertionSort(arr, n);
 
                     printf("Imprimindo os primeiros 35 elementos do Array...\n");
                     printArray(arr, n);
@@ -130,7 +129,7 @@ int main(int argc, char const *argv[]){
             }else if (l == 2) {
                 printf("Imprimindo os primeiros 35 elementos do Array...\n");
                 printArray(arr, n);
-                return 0;
+                
             } else {
                 printf("Opcao invalida\n");
                 return 1;
@@ -146,20 +145,19 @@ int main(int argc, char const *argv[]){
                    "1- Sim\n"
                    "2- Nao\n\n");
                   scanf("%d", &l);
+
+                  arr = (int *)malloc(n * sizeof(int));
+
+                  printf("Qual tamanho de Array que deseja gerar?\n");
+                    scanf("%d", &n);
+                    if(n <= 0){
+                    printf("valor invalido!");
+                    return -1;
+                } 
             if(l == 1){
 
                 double tempo;
                 clock_t inicio, fim;
-
-                
-
-                printf("Qual tamanho de Array que deseja gerar?\n");
-                scanf("%d", &n);
-                if(n <= 0){
-                    printf("valor invalido!");
-                    return -1;
-                } 
-                arr = (int *)malloc(n * sizeof(int));
 
                 inicio = clock();
 
@@ -171,7 +169,7 @@ int main(int argc, char const *argv[]){
                            "--------Ordenando--------\n"
                            "-------------------------\n\n");
                     
-                    selectionSort(arr, n);
+                    insertionSort(arr, n);
 
                     printf("Imprimindo os primeiros 35 elementos do Array...\n");
                     printArray(arr, n);
@@ -183,7 +181,7 @@ int main(int argc, char const *argv[]){
             } else if (l == 2) {
                 printf("Imprimindo os primeiros 35 elementos do Array...\n");
                 printArray(arr, n);
-                return 0;
+            
             } else {
                 printf("Opcao invalida\n");
                 return 1;
