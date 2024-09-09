@@ -105,5 +105,35 @@ void merge(int *a, int esq, int meio, int dir){
     for(j = 0; j< n2; j++){
         aD[j] = a[meio + 1 + j];
     }
-         
+    
+    i = 0;
+    j = 0;
+    k = esq;
+
+    while (i < n1 && j < n2)
+    {
+        if (aE[i] <= aD[j]){
+            a[k] = aE[i];
+            i++;
+        }
+        else {
+            a[k] = aD[j];
+            j++;
+        }
+        k++;
+    }
+
+    while (i < n1)
+    {
+        a[k] = aE[i];
+        i++;
+        k++;
+    }
+    
+    while (j < n2)
+    {
+        a[k] = aD[j];
+        j++;
+        k++;
+    }
 }
