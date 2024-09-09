@@ -79,3 +79,31 @@ void printArray(int arr[], int n) {
     printf("\n\n");
 }
 
+
+
+void mergeSort(int *a, int esq, int dir){
+    if(esq < dir){
+        int meio = esq + (dir - esq)/2;
+         
+        mergeSort(a, esq, meio);
+        mergeSort(a, meio + 1, dir);
+
+        merge(a, esq, meio, dir);
+    }
+}
+
+void merge(int *a, int esq, int meio, int dir){
+    int i, j, k;
+    int n1 = meio - esq + 1;
+    int n2 = dir - meio;
+
+    int aE[n1], aD[n2];
+
+    for(i = 0; i < n1; i++){
+        aE[i] = a[esq + i];
+    }
+    for(j = 0; j< n2; j++){
+        aD[j] = a[meio + 1 + j];
+    }
+         
+}
