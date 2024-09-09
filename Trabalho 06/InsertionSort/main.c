@@ -39,10 +39,11 @@ int main(int argc, char const *argv[]){
                   "2- Nao\n\n");
                   scanf("%d", &l);
 
-                  arr = (int *)malloc(n * sizeof(int));
+                  
 
                   printf("Qual tamanho de Array que deseja gerar?\n");
                     scanf("%d", &n);
+                    arr = (int *)malloc(n * sizeof(int));
                     if(n <= 0){
                     printf("valor invalido!");
                     return -1;
@@ -93,10 +94,11 @@ int main(int argc, char const *argv[]){
                    "2- Nao\n\n");
                   scanf("%d", &l);
 
-                  arr = (int *)malloc(n * sizeof(int));
+                  
 
                   printf("Qual tamanho de Array que deseja gerar?\n");
                     scanf("%d", &n);
+                    arr = (int *)malloc(n * sizeof(int));
                     if(n <= 0){
                     printf("valor invalido!");
                     return -1;
@@ -146,10 +148,11 @@ int main(int argc, char const *argv[]){
                    "2- Nao\n\n");
                   scanf("%d", &l);
 
-                  arr = (int *)malloc(n * sizeof(int));
+                  
 
                   printf("Qual tamanho de Array que deseja gerar?\n");
                     scanf("%d", &n);
+                    arr = (int *)malloc(n * sizeof(int));
                     if(n <= 0){
                     printf("valor invalido!");
                     return -1;

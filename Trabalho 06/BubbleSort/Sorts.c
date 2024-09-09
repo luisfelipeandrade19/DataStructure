@@ -1,3 +1,6 @@
+#include <stdlib.h>
+#include <stdio.h>
+
 void swap(int *a, int* b){
     int temp = *a;
     *a = *b;
@@ -81,17 +84,6 @@ void printArray(int arr[], int n) {
 
 
 
-void mergeSort(int *a, int esq, int dir){
-    if(esq < dir){
-        int meio = esq + (dir - esq)/2;
-         
-        mergeSort(a, esq, meio);
-        mergeSort(a, meio + 1, dir);
-
-        merge(a, esq, meio, dir);
-    }
-}
-
 void merge(int *a, int esq, int meio, int dir){
     int i, j, k;
     int n1 = meio - esq + 1;
@@ -135,5 +127,16 @@ void merge(int *a, int esq, int meio, int dir){
         a[k] = aD[j];
         j++;
         k++;
+    }
+}
+
+void mergeSort(int *a, int esq, int dir){
+    if(esq < dir){
+        int meio = esq + (dir - esq)/2;
+         
+        mergeSort(a, esq, meio);
+        mergeSort(a, meio + 1, dir);
+
+        merge(a, esq, meio, dir);
     }
 }

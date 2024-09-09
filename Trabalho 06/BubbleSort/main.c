@@ -39,10 +39,11 @@ int main(int argc, char const *argv[]){
                   "2- Nao\n\n");
                   scanf("%d", &l);
 
-                  arr = (int *)malloc(n * sizeof(int));
+                 
 
                   printf("Qual tamanho de Array que deseja gerar?\n");
                     scanf("%d", &n);
+                     arr = (int *)malloc(n * sizeof(int));
                     if(n <= 0){
                     printf("valor invalido!");
                     return -1;
@@ -62,7 +63,7 @@ int main(int argc, char const *argv[]){
                            "--------Ordenando--------\n"
                            "-------------------------\n\n");
                     
-                    insertionSort(arr, n);
+                    bubbleSort(arr, n);
 
                     printf("Imprimindo os primeiros 35 elementos do Array...\n");
                     printArray(arr, n);
@@ -93,10 +94,11 @@ int main(int argc, char const *argv[]){
                    "2- Nao\n\n");
                   scanf("%d", &l);
 
-                  arr = (int *)malloc(n * sizeof(int));
+                  
 
                   printf("Qual tamanho de Array que deseja gerar?\n");
                     scanf("%d", &n);
+                    arr = (int *)malloc(n * sizeof(int));
                     if(n <= 0){
                     printf("valor invalido!");
                     return -1;
@@ -116,7 +118,7 @@ int main(int argc, char const *argv[]){
                            "--------Ordenando--------\n"
                            "-------------------------\n\n");
                     
-                    insertionSort(arr, n);
+                    bubbleSort(arr, n);
 
                     printf("Imprimindo os primeiros 35 elementos do Array...\n");
                     printArray(arr, n);
@@ -146,10 +148,11 @@ int main(int argc, char const *argv[]){
                    "2- Nao\n\n");
                   scanf("%d", &l);
 
-                  arr = (int *)malloc(n * sizeof(int));
+                  
 
                   printf("Qual tamanho de Array que deseja gerar?\n");
                     scanf("%d", &n);
+                    arr = (int *)malloc(n * sizeof(int));
                     if(n <= 0){
                     printf("valor invalido!");
                     return -1;
@@ -169,7 +172,7 @@ int main(int argc, char const *argv[]){
                            "--------Ordenando--------\n"
                            "-------------------------\n\n");
                     
-                    insertionSort(arr, n);
+                    bubbleSort(arr, n);
 
                     printf("Imprimindo os primeiros 35 elementos do Array...\n");
                     printArray(arr, n);
