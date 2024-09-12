@@ -27,6 +27,8 @@ int main(int argc, char const *argv[]){
         int l;
         int n;
         int *arr = NULL;
+        double tempo;
+        clock_t inicio, fim;
         switch (escolha){
             case 1:
             
@@ -50,8 +52,7 @@ int main(int argc, char const *argv[]){
                 } 
             if(l == 1){
 
-                double tempo;
-                clock_t inicio, fim;
+        
 
                 inicio = clock();
 
@@ -89,13 +90,7 @@ int main(int argc, char const *argv[]){
             printf("-------------------------\n");
             printf("Gerando Ordenadamente....\n");
             printf("-------------------------\n\n");
-            printf("Ordenar Array?\n"
-                   "1- Sim\n"
-                   "2- Nao\n\n");
-                  scanf("%d", &l);
-
-                  
-
+    
                   printf("Qual tamanho de Array que deseja gerar?\n");
                     scanf("%d", &n);
                     arr = (int *)malloc(n * sizeof(int));
@@ -103,10 +98,6 @@ int main(int argc, char const *argv[]){
                     printf("valor invalido!");
                     return -1;
                 } 
-            if(l == 1){
-
-                double tempo;
-                clock_t inicio, fim;
 
                 inicio = clock();
 
@@ -128,14 +119,7 @@ int main(int argc, char const *argv[]){
                 tempo = ((double)(fim - inicio)) / CLOCKS_PER_SEC;
                 printf("\nTempo gasto: %g s.\n", tempo);
 
-            }else if (l == 2) {
-                printf("Imprimindo os primeiros 35 elementos do Array...\n");
-                printArray(arr, n);
-                
-            } else {
-                printf("Opcao invalida\n");
-                return 1;
-            }
+            
             break;
 
             case 3:
@@ -143,12 +127,7 @@ int main(int argc, char const *argv[]){
                  printf("-----------------------------\n");
                  printf("Gerando Reversamente Ordenado\n");
                  printf("-----------------------------\n\n");
-            printf("Ordenar Array?\n"
-                   "1- Sim\n"
-                   "2- Nao\n\n");
-                  scanf("%d", &l);
-
-                  
+        
 
                   printf("Qual tamanho de Array que deseja gerar?\n");
                     scanf("%d", &n);
@@ -157,10 +136,6 @@ int main(int argc, char const *argv[]){
                     printf("valor invalido!");
                     return -1;
                 } 
-            if(l == 1){
-
-                double tempo;
-                clock_t inicio, fim;
 
                 inicio = clock();
 
@@ -181,14 +156,7 @@ int main(int argc, char const *argv[]){
 
                 tempo = ((double)(fim - inicio)) / CLOCKS_PER_SEC;
                 printf("\nTempo gasto: %g s.\n", tempo);
-            } else if (l == 2) {
-                printf("Imprimindo os primeiros 35 elementos do Array...\n");
-                printArray(arr, n);
             
-            } else {
-                printf("Opcao invalida\n");
-                return 1;
-            }
             break;
             
             case 4:
